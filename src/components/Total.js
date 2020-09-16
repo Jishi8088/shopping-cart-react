@@ -28,7 +28,7 @@ class Total extends Component{
                                 
                             </label>
                         </li>
-                        <li className="collection-item"><b>Total: Rs{this.props.totall} </b></li>
+                        <li className="collection-item"><b>Total: Rs{this.props.total} </b></li>
                     </div>
                     <div className="checkout">
                        
