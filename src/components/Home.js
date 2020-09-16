@@ -2,22 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
 
- class Home extends Component{
-    
+ class Home extends Component{ 
     handleClick = (id)=>{
         this.props.addToCart(id); 
     }
-
     render(){
         let itemList = this.props.items.map(item=>{
             return(
                 <div className="card" key={item.id}>
                         <div className="card-image">
                             <img src={item.img} alt={item.title}/>
-                            
                             <span to="/" className="btn-floating halfway-fab waves-effect waves-light red" onClick={()=>{this.handleClick(item.id)}}><i className="material-icons">add</i></span>
                         </div>
-
                         <div className="card-content">
                         <span className="card-title"><h5><b>{item.title}</b></h5></span>
                             <p>{item.desc}</p>
